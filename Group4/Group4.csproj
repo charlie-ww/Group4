@@ -1,0 +1,989 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8CE34E4-01B6-49C4-AE26-EF0E5A5C440F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Group4</RootNamespace>
+    <AssemblyName>Group4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Photo\X.png" />
+    <Content Include="Web.config" />
+    <Content Include="七星潭.aspx" />
+    <Content Include="九份.aspx" />
+    <Content Include="九宮格圖片\南投九宮格\寶島時代村.jpg" />
+    <Content Include="九宮格圖片\南投九宮格\忘憂森林.jpg" />
+    <Content Include="九宮格圖片\南投九宮格\藍田書院.jpg" />
+    <Content Include="九宮格圖片\南投九宮格\錯誤1.jpg" />
+    <Content Include="九宮格圖片\南投九宮格\錯誤2.jpg" />
+    <Content Include="九宮格圖片\南投九宮格\錯誤3.jpg" />
+    <Content Include="九宮格圖片\南投九宮格\錯誤4.jpg" />
+    <Content Include="九宮格圖片\南投九宮格\錯誤5.jpg" />
+    <Content Include="九宮格圖片\南投九宮格\錯誤6.jpg" />
+    <Content Include="九宮格圖片\台中九宮格\台中混淆1.JPG" />
+    <Content Include="九宮格圖片\台中九宮格\台中混淆2.JPG" />
+    <Content Include="九宮格圖片\台中九宮格\台中混淆3.JPG" />
+    <Content Include="九宮格圖片\台中九宮格\台中混淆4.JPG" />
+    <Content Include="九宮格圖片\台中九宮格\台中混淆5.JPG" />
+    <Content Include="九宮格圖片\台中九宮格\台中混淆6.JPG" />
+    <Content Include="九宮格圖片\台中九宮格\大理藝術特區.png" />
+    <Content Include="九宮格圖片\台中九宮格\彩虹眷村九宮格.jpg" />
+    <Content Include="九宮格圖片\台中九宮格\滔月景觀咖啡九宮格.jpg" />
+    <Content Include="九宮格圖片\台北九宮格\九份九宮格.jpg" />
+    <Content Include="九宮格圖片\台北九宮格\台北混淆1.jpg" />
+    <Content Include="九宮格圖片\台北九宮格\台北混淆2.jpg" />
+    <Content Include="九宮格圖片\台北九宮格\台北混淆3.jpg" />
+    <Content Include="九宮格圖片\台北九宮格\台北混淆4.jpg" />
+    <Content Include="九宮格圖片\台北九宮格\台北混淆5.jpg" />
+    <Content Include="九宮格圖片\台北九宮格\福隆九宮格.jpg" />
+    <Content Include="九宮格圖片\台北九宮格\西門町九宮格.jpg" />
+    <Content Include="九宮格圖片\台北九宮格\象山九宮格.jpg" />
+    <Content Include="九宮格圖片\台南九宮格\台江國家公園.jpg" />
+    <Content Include="九宮格圖片\台南九宮格\港濱歷史公園.jpg" />
+    <Content Include="九宮格圖片\台南九宮格\錯誤1.jpg" />
+    <Content Include="九宮格圖片\台南九宮格\錯誤2.jpg" />
+    <Content Include="九宮格圖片\台南九宮格\錯誤3.jpg" />
+    <Content Include="九宮格圖片\台南九宮格\錯誤4.jpg" />
+    <Content Include="九宮格圖片\台南九宮格\錯誤5.jpg" />
+    <Content Include="九宮格圖片\台南九宮格\錯誤6.jpg" />
+    <Content Include="九宮格圖片\台南九宮格\鹿耳門聖母廟.jpg" />
+    <Content Include="九宮格圖片\台東九宮格\原住民文化創意產業聚落.jpg" />
+    <Content Include="九宮格圖片\台東九宮格\達魯瑪克部落.jpg" />
+    <Content Include="九宮格圖片\台東九宮格\錯誤1.jpg" />
+    <Content Include="九宮格圖片\台東九宮格\錯誤2.jpg" />
+    <Content Include="九宮格圖片\台東九宮格\錯誤3.jpg" />
+    <Content Include="九宮格圖片\台東九宮格\錯誤4.jpg" />
+    <Content Include="九宮格圖片\台東九宮格\錯誤5.jpg" />
+    <Content Include="九宮格圖片\台東九宮格\錯誤6.jpg" />
+    <Content Include="九宮格圖片\台東九宮格\鹿野高台.jpg" />
+    <Content Include="九宮格圖片\嘉義九宮格\好美里3D立體彩繪村.jpg" />
+    <Content Include="九宮格圖片\嘉義九宮格\射日塔.jpg" />
+    <Content Include="九宮格圖片\嘉義九宮格\錯誤1.jpg" />
+    <Content Include="九宮格圖片\嘉義九宮格\錯誤2.jpg" />
+    <Content Include="九宮格圖片\嘉義九宮格\錯誤3.jpg" />
+    <Content Include="九宮格圖片\嘉義九宮格\錯誤4.jpg" />
+    <Content Include="九宮格圖片\嘉義九宮格\錯誤5.jpg" />
+    <Content Include="九宮格圖片\嘉義九宮格\錯誤6.jpg" />
+    <Content Include="九宮格圖片\嘉義九宮格\鰲鼓溼地.jpg" />
+    <Content Include="九宮格圖片\宜蘭九宮格\五結鄉 九宮格.jpg" />
+    <Content Include="九宮格圖片\宜蘭九宮格\南方澳九宮格.jpg" />
+    <Content Include="九宮格圖片\宜蘭九宮格\宜蘭混淆1.jpg" />
+    <Content Include="九宮格圖片\宜蘭九宮格\宜蘭混淆2.jpg" />
+    <Content Include="九宮格圖片\宜蘭九宮格\宜蘭混淆3.jpg" />
+    <Content Include="九宮格圖片\宜蘭九宮格\宜蘭混淆4.jpg" />
+    <Content Include="九宮格圖片\宜蘭九宮格\宜蘭混淆5.jpg" />
+    <Content Include="九宮格圖片\宜蘭九宮格\羅東夜市 九宮格.jpg" />
+    <Content Include="九宮格圖片\宜蘭九宮格\蘭陽博物館九宮格.jpg" />
+    <Content Include="九宮格圖片\屏東九宮格\九棚沙漠.jpg" />
+    <Content Include="九宮格圖片\屏東九宮格\南洋風高腳屋.jpg" />
+    <Content Include="九宮格圖片\屏東九宮格\艾米達精靈谷茶樹莊園.jpg" />
+    <Content Include="九宮格圖片\屏東九宮格\錯誤1.jpg" />
+    <Content Include="九宮格圖片\屏東九宮格\錯誤2.jpg" />
+    <Content Include="九宮格圖片\屏東九宮格\錯誤3.jpg" />
+    <Content Include="九宮格圖片\屏東九宮格\錯誤4.jpg" />
+    <Content Include="九宮格圖片\屏東九宮格\錯誤5.jpg" />
+    <Content Include="九宮格圖片\屏東九宮格\錯誤6.jpg" />
+    <Content Include="九宮格圖片\彰化九宮格\摸乳巷.jpg" />
+    <Content Include="九宮格圖片\彰化九宮格\民俗文物館.jpg" />
+    <Content Include="九宮格圖片\彰化九宮格\水銡利廚衛生活村.jpg" />
+    <Content Include="九宮格圖片\彰化九宮格\萬景藝苑.jpg" />
+    <Content Include="九宮格圖片\彰化九宮格\錯誤.jpg" />
+    <Content Include="九宮格圖片\彰化九宮格\錯誤1.jpg" />
+    <Content Include="九宮格圖片\彰化九宮格\錯誤2.jpg" />
+    <Content Include="九宮格圖片\彰化九宮格\錯誤3.jpg" />
+    <Content Include="九宮格圖片\彰化九宮格\錯誤4.jpg" />
+    <Content Include="九宮格圖片\新竹九宮格\內灣戲院 九宮格.jpg" />
+    <Content Include="九宮格圖片\新竹九宮格\六福村九宮格.jpg" />
+    <Content Include="九宮格圖片\新竹九宮格\司馬庫斯九宮格.jpg" />
+    <Content Include="九宮格圖片\新竹九宮格\味衛佳九宮格.jpg" />
+    <Content Include="九宮格圖片\新竹九宮格\新竹混淆1.jpg" />
+    <Content Include="九宮格圖片\新竹九宮格\新竹混淆2.jpg" />
+    <Content Include="九宮格圖片\新竹九宮格\新竹混淆3.jpg" />
+    <Content Include="九宮格圖片\新竹九宮格\新竹混淆4.jpg" />
+    <Content Include="九宮格圖片\新竹九宮格\新竹混淆5.jpg" />
+    <Content Include="九宮格圖片\桃園九宮格\大溪老街九宮格.jpg" />
+    <Content Include="九宮格圖片\桃園九宮格\桃園混淆1.jpg" />
+    <Content Include="九宮格圖片\桃園九宮格\桃園混淆2.jpg" />
+    <Content Include="九宮格圖片\桃園九宮格\桃園混淆3.jpg" />
+    <Content Include="九宮格圖片\桃園九宮格\桃園混淆4.jpg" />
+    <Content Include="九宮格圖片\桃園九宮格\桃園混淆5.jpg" />
+    <Content Include="九宮格圖片\桃園九宮格\桃園混淆6.jpg" />
+    <Content Include="九宮格圖片\桃園九宮格\石門水庫 九宮格.jpg" />
+    <Content Include="九宮格圖片\桃園九宮格\落羽松九宮格.jpg" />
+    <Content Include="九宮格圖片\花蓮九宮格\七星潭 九宮格.jpg" />
+    <Content Include="九宮格圖片\花蓮九宮格\六十石山九宮格.jpg" />
+    <Content Include="九宮格圖片\花蓮九宮格\大鼻山步道九宮格.jpg" />
+    <Content Include="九宮格圖片\花蓮九宮格\花蓮混淆1.jpg" />
+    <Content Include="九宮格圖片\花蓮九宮格\花蓮混淆2.jpg" />
+    <Content Include="九宮格圖片\花蓮九宮格\花蓮混淆3.jpg" />
+    <Content Include="九宮格圖片\花蓮九宮格\花蓮混淆4.jpg" />
+    <Content Include="九宮格圖片\花蓮九宮格\花蓮混淆5 %28註 原檔案打成台東%29.jpg" />
+    <Content Include="九宮格圖片\花蓮九宮格\貨櫃屋星巴克九宮格.jpg" />
+    <Content Include="九宮格圖片\苗栗九宮格\崎頂子母隧道九宮格.jpg" />
+    <Content Include="九宮格圖片\苗栗九宮格\竹南啤酒廠九宮格.jpg" />
+    <Content Include="九宮格圖片\苗栗九宮格\苗栗混淆1.jpg" />
+    <Content Include="九宮格圖片\苗栗九宮格\苗栗混淆2.jpg" />
+    <Content Include="九宮格圖片\苗栗九宮格\苗栗混淆3.jpg" />
+    <Content Include="九宮格圖片\苗栗九宮格\苗栗混淆4.jpg" />
+    <Content Include="九宮格圖片\苗栗九宮格\苗栗混淆5.jpg" />
+    <Content Include="九宮格圖片\苗栗九宮格\苗栗混淆6.jpg" />
+    <Content Include="九宮格圖片\苗栗九宮格\銅鑼天空步道九宮格.jpg" />
+    <Content Include="九宮格圖片\雲林九宮格\天空之橋.jpg" />
+    <Content Include="九宮格圖片\雲林九宮格\珍粉紅教堂.jpg" />
+    <Content Include="九宮格圖片\雲林九宮格\菓風巧克力工房.jpg" />
+    <Content Include="九宮格圖片\雲林九宮格\錯誤1.jpg" />
+    <Content Include="九宮格圖片\雲林九宮格\錯誤2.jpg" />
+    <Content Include="九宮格圖片\雲林九宮格\錯誤3.jpg" />
+    <Content Include="九宮格圖片\雲林九宮格\錯誤4.jpg" />
+    <Content Include="九宮格圖片\雲林九宮格\錯誤5.jpg" />
+    <Content Include="九宮格圖片\雲林九宮格\錯誤6.jpg" />
+    <Content Include="九宮格圖片\高雄九宮格\月世界地景公園.jpg" />
+    <Content Include="九宮格圖片\高雄九宮格\棧貳庫 KW2.jpg" />
+    <Content Include="九宮格圖片\高雄九宮格\錯誤1.jpg" />
+    <Content Include="九宮格圖片\高雄九宮格\錯誤2.jpg" />
+    <Content Include="九宮格圖片\高雄九宮格\錯誤3.jpg" />
+    <Content Include="九宮格圖片\高雄九宮格\錯誤4.jpg" />
+    <Content Include="九宮格圖片\高雄九宮格\錯誤5.jpg" />
+    <Content Include="九宮格圖片\高雄九宮格\錯誤6.jpg" />
+    <Content Include="九宮格圖片\高雄九宮格\龍頭山遊憩區.jpg" />
+    <Content Include="九棚沙漠.aspx" />
+    <Content Include="五結鄉.aspx" />
+    <Content Include="內灣戲院.aspx" />
+    <Content Include="六十石山.aspx" />
+    <Content Include="六福村.aspx" />
+    <Content Include="南投.aspx" />
+    <Content Include="南方澳.aspx" />
+    <Content Include="南洋風高腳屋.aspx" />
+    <Content Include="原住民文化創意產業聚落.aspx" />
+    <Content Include="台中.aspx" />
+    <Content Include="台南.aspx" />
+    <Content Include="台東.aspx" />
+    <Content Include="台江國家公園.aspx" />
+    <Content Include="台灣地圖.png" />
+    <Content Include="司馬庫斯.aspx" />
+    <Content Include="味衛佳.aspx" />
+    <Content Include="嘉義.aspx" />
+    <Content Include="大溪老街.aspx" />
+    <Content Include="大理藝術特區.aspx" />
+    <Content Include="大鼻山步道.aspx" />
+    <Content Include="天空之橋.aspx" />
+    <Content Include="好美里3D立體彩繪村.aspx" />
+    <Content Include="宜蘭.aspx" />
+    <Content Include="寶島時代村.aspx" />
+    <Content Include="射日塔.aspx" />
+    <Content Include="屏東.aspx" />
+    <Content Include="崎頂子母隧道.aspx" />
+    <Content Include="彩虹眷村.aspx" />
+    <Content Include="彰化.aspx" />
+    <Content Include="忘憂森林.aspx" />
+    <Content Include="摸乳巷.aspx" />
+    <Content Include="新竹.aspx" />
+    <Content Include="景點介紹\南投\寶島時代村\1562412407-1fdbb2aad8ce7c950163fb3513d0421a.jpg" />
+    <Content Include="景點介紹\南投\寶島時代村\20190424112536-a55a1900.jpg" />
+    <Content Include="景點介紹\南投\寶島時代村\33945777588_de63f64e2e_b.jpg" />
+    <Content Include="景點介紹\南投\寶島時代村\草屯肉圓李.jpg" />
+    <Content Include="景點介紹\南投\忘憂森林\1457164904-3874673454.jpg" />
+    <Content Include="景點介紹\南投\忘憂森林\i1.jpg" />
+    <Content Include="景點介紹\南投\忘憂森林\shui_yang_sen_lin_1.jpg" />
+    <Content Include="景點介紹\南投\忘憂森林\竹亭咖啡.jpg" />
+    <Content Include="景點介紹\南投\藍田書院\FLPq_800.jpg" />
+    <Content Include="景點介紹\南投\藍田書院\IMG_20200601_110713.jpg" />
+    <Content Include="景點介紹\南投\藍田書院\unnamed.jpg" />
+    <Content Include="景點介紹\南投\藍田書院\阿章意麵.jpg" />
+    <Content Include="景點介紹\台中\大理藝術特區\大理藝術特區.jpg" />
+    <Content Include="景點介紹\台中\大理藝術特區\宙影幻鏡.jpg" />
+    <Content Include="景點介紹\台中\大理藝術特區\歐森.jpg" />
+    <Content Include="景點介紹\台中\大理藝術特區\菜單.jpg" />
+    <Content Include="景點介紹\台中\彩虹眷村\彩虹眷村.jpg" />
+    <Content Include="景點介紹\台中\彩虹眷村\彩虹眷村1.jpg" />
+    <Content Include="景點介紹\台中\彩虹眷村\成功陳臭豆腐.jpg" />
+    <Content Include="景點介紹\台中\彩虹眷村\成功陳臭豆腐1.jpg" />
+    <Content Include="景點介紹\台中\滔月景觀咖啡廳\店貓.jpg" />
+    <Content Include="景點介紹\台中\滔月景觀咖啡廳\滔月景觀咖啡.jpg" />
+    <Content Include="景點介紹\台中\滔月景觀咖啡廳\滔月景觀咖啡1.jpg" />
+    <Content Include="景點介紹\台中\滔月景觀咖啡廳\滔月食物.jpg" />
+    <Content Include="景點介紹\台中\滔月景觀咖啡廳\餐廳內部.jpg" />
+    <Content Include="景點介紹\台北\九份\交通資訊.jpg" />
+    <Content Include="景點介紹\台北\九份\夜景.jpeg" />
+    <Content Include="景點介紹\台北\九份\夜景1.jpg" />
+    <Content Include="景點介紹\台北\九份\阿柑姨芋園1.jpg" />
+    <Content Include="景點介紹\台北\九份\阿柑姨芋圓.jpg" />
+    <Content Include="景點介紹\台北\福隆海水浴場\沙雕藝術季.jpg" />
+    <Content Include="景點介紹\台北\福隆海水浴場\海洋音樂祭.jpg" />
+    <Content Include="景點介紹\台北\福隆海水浴場\阿芳石花凍.jpg" />
+    <Content Include="景點介紹\台北\福隆海水浴場\阿芳石花凍1.jpg" />
+    <Content Include="景點介紹\台北\西門町\唐吉訶德.jpg" />
+    <Content Include="景點介紹\台北\西門町\老天祿滷味.jpg" />
+    <Content Include="景點介紹\台北\西門町\老天祿滷味1.jpg" />
+    <Content Include="景點介紹\台北\西門町\西門町街道.jpg" />
+    <Content Include="景點介紹\台北\象山\澠公製麵.jpg" />
+    <Content Include="景點介紹\台北\象山\眺望101.jpg" />
+    <Content Include="景點介紹\台北\象山\象山交通資訊.jpg" />
+    <Content Include="景點介紹\台北\象山\象山石梯示意圖.JPG" />
+    <Content Include="景點介紹\台南\台江國家公園\1558064003.jpg" />
+    <Content Include="景點介紹\台南\台江國家公園\201651916543713.jpg" />
+    <Content Include="景點介紹\台南\台江國家公園\7087cfa785013278b0f5698d0464d0d82ed18417.jpg" />
+    <Content Include="景點介紹\台南\台江國家公園\椰庭景觀餐廳.jpg" />
+    <Content Include="景點介紹\台南\港濱歷史公園\20151023155601.jpg" />
+    <Content Include="景點介紹\台南\港濱歷史公園\2950957_1_1.jpg" />
+    <Content Include="景點介紹\台南\港濱歷史公園\unnamed.jpg" />
+    <Content Include="景點介紹\台南\港濱歷史公園\孫家小卷米粉.jpg" />
+    <Content Include="景點介紹\台南\鹿耳門聖母宮\20190309001997.jpg" />
+    <Content Include="景點介紹\台南\鹿耳門聖母宮\84455dc9cd714afd9f515a6b5bbd99f7_心星-廟內2.jpg" />
+    <Content Include="景點介紹\台南\鹿耳門聖母宮\希望古早味麻油雞米糕.jpg" />
+    <Content Include="景點介紹\台南\鹿耳門聖母宮\正統鹿耳門聖母廟環境愜意.jpg" />
+    <Content Include="景點介紹\台東\原住民文化創意產業聚落\1.jpg" />
+    <Content Include="景點介紹\台東\原住民文化創意產業聚落\560e2f160b84d.jpg" />
+    <Content Include="景點介紹\台東\原住民文化創意產業聚落\Like來顆烤飯糰.jpg" />
+    <Content Include="景點介紹\台東\原住民文化創意產業聚落\unnamed.jpg" />
+    <Content Include="景點介紹\台東\達魯瑪克部落\2857670_1_1.jpg" />
+    <Content Include="景點介紹\台東\達魯瑪克部落\3-7.jpg" />
+    <Content Include="景點介紹\台東\達魯瑪克部落\Taromak02.jpg" />
+    <Content Include="景點介紹\台東\達魯瑪克部落\達瓦娜原味餐廳.jpg" />
+    <Content Include="景點介紹\台東\鹿野高台\20190420-WPC_5372.jpg" />
+    <Content Include="景點介紹\台東\鹿野高台\台灣國際熱氣球嘉年華_2-1024x683.jpg" />
+    <Content Include="景點介紹\台東\鹿野高台\李伯伯食堂.jpg" />
+    <Content Include="景點介紹\台東\鹿野高台\鹿野高台熱氣球區.jpg" />
+    <Content Include="景點介紹\嘉義\好美里3D立體彩繪村\1209046581_l.jpg" />
+    <Content Include="景點介紹\嘉義\好美里3D立體彩繪村\b3583_6.jpg" />
+    <Content Include="景點介紹\嘉義\好美里3D立體彩繪村\c348e4c43dd928dca5de86de46f6bdba.jpg" />
+    <Content Include="景點介紹\嘉義\好美里3D立體彩繪村\雙燕蚵仔包.jpg" />
+    <Content Include="景點介紹\嘉義\射日塔\11394-20130521121822.jpg" />
+    <Content Include="景點介紹\嘉義\射日塔\1592759083-2028715787.jpg" />
+    <Content Include="景點介紹\嘉義\射日塔\9933b39534eca87de40b0a3f32a114cc.jpg" />
+    <Content Include="景點介紹\嘉義\射日塔\公園老店涼麵、肉羹麵.jpg" />
+    <Content Include="景點介紹\嘉義\鰲鼓溼地\pic_9688_2.jpg" />
+    <Content Include="景點介紹\嘉義\鰲鼓溼地\樺榮海鮮餐廳.jpg" />
+    <Content Include="景點介紹\嘉義\鰲鼓溼地\鰲鼓濕地森林園區地標.jpg" />
+    <Content Include="景點介紹\嘉義\鰲鼓溼地\鳥瞰鰲鼓濕地.jpg" />
+    <Content Include="景點介紹\宜蘭\五結鄉\園區表演.jpg" />
+    <Content Include="景點介紹\宜蘭\五結鄉\綠舞日式主題園區.jpg" />
+    <Content Include="景點介紹\宜蘭\五結鄉\蘆花雞.jpg" />
+    <Content Include="景點介紹\宜蘭\五結鄉\蘆花雞1.jpg" />
+    <Content Include="景點介紹\宜蘭\南方澳\南方澳.jpg" />
+    <Content Include="景點介紹\宜蘭\南方澳\南方澳大橋.jpg" />
+    <Content Include="景點介紹\宜蘭\南方澳\無名蝦餅.jpg" />
+    <Content Include="景點介紹\宜蘭\羅東夜市\%28原小彥子%29三星蔥肉串.jpg" />
+    <Content Include="景點介紹\宜蘭\羅東夜市\嚐味鮮湯包.jpg" />
+    <Content Include="景點介紹\宜蘭\羅東夜市\阿灶伯當歸羊肉.jpg" />
+    <Content Include="景點介紹\宜蘭\羅東夜市\阿灶伯當歸羊肉1.jpg" />
+    <Content Include="景點介紹\宜蘭\羅東夜市\阿灶伯當歸羊肉2.jpg" />
+    <Content Include="景點介紹\宜蘭\蘭陽博物館\樂山拉麵.jpg" />
+    <Content Include="景點介紹\宜蘭\蘭陽博物館\樂山拉麵外觀.jpg" />
+    <Content Include="景點介紹\宜蘭\蘭陽博物館\蘭陽博物館.jpg" />
+    <Content Include="景點介紹\宜蘭\蘭陽博物館\蘭陽博物館內部.jpg" />
+    <Content Include="景點介紹\屏東\九棚沙漠\20190623221721_35.jpg" />
+    <Content Include="景點介紹\屏東\九棚沙漠\6876f002ba96c6d5ec62ebdbc4a88c59.jpg" />
+    <Content Include="景點介紹\屏東\九棚沙漠\jiupeng-desert-4911.jpg" />
+    <Content Include="景點介紹\屏東\九棚沙漠\陳秋枝山海產店.jpg" />
+    <Content Include="景點介紹\屏東\南洋風高腳屋\1581227508-1769288778.jpg" />
+    <Content Include="景點介紹\屏東\南洋風高腳屋\20201028113842_22.jpg" />
+    <Content Include="景點介紹\屏東\南洋風高腳屋\76600659fe0e7ddbe678f243cc4d43b40816e06c.jpg" />
+    <Content Include="景點介紹\屏東\南洋風高腳屋\文魁麵店.jpg" />
+    <Content Include="景點介紹\屏東\艾米達精靈谷茶樹莊園\20200225124613_30.jpg" />
+    <Content Include="景點介紹\屏東\艾米達精靈谷茶樹莊園\20200403092637_67.jpg" />
+    <Content Include="景點介紹\屏東\艾米達精靈谷茶樹莊園\下載.jpg" />
+    <Content Include="景點介紹\屏東\艾米達精靈谷茶樹莊園\建功粄條.jpg" />
+    <Content Include="景點介紹\彰化\摸乳巷\1562336477-3477830709_l.jpg" />
+    <Content Include="景點介紹\彰化\摸乳巷\DSC03623.JPG" />
+    <Content Include="景點介紹\彰化\摸乳巷\下載.jpg" />
+    <Content Include="景點介紹\彰化\摸乳巷\鹿港肉羹泉.jpg" />
+    <Content Include="景點介紹\彰化\民俗文物館\lukangarts-img1.jpg" />
+    <Content Include="景點介紹\彰化\民俗文物館\lukangarts-img2.jpg" />
+    <Content Include="景點介紹\彰化\民俗文物館\s_鹿港民俗文物館內部.jpg" />
+    <Content Include="景點介紹\彰化\民俗文物館\老龍師肉包.jpg" />
+    <Content Include="景點介紹\彰化\水銡利廚衛生活村\1554965991-3257956851.jpg" />
+    <Content Include="景點介紹\彰化\水銡利廚衛生活村\1559472552-fd3fbc028b849e4a6d09e4eb912ed7d7.jpg" />
+    <Content Include="景點介紹\彰化\水銡利廚衛生活村\1559472685-e100439462d44dc9fe355fd1b2847238.jpg" />
+    <Content Include="景點介紹\彰化\水銡利廚衛生活村\小美布丁蛋糕專賣店.JPG" />
+    <Content Include="景點介紹\彰化\萬景藝苑\maxresdefault.jpg" />
+    <Content Include="景點介紹\彰化\萬景藝苑\wan-ching-img3.jpg" />
+    <Content Include="景點介紹\彰化\萬景藝苑\下載.jpg" />
+    <Content Include="景點介紹\彰化\萬景藝苑\黃水萍土羊肉 %282%29.jpg" />
+    <Content Include="景點介紹\新竹\內灣老街\內灣吊橋.jpg" />
+    <Content Include="景點介紹\新竹\內灣老街\內灣老街.jpg" />
+    <Content Include="景點介紹\新竹\內灣老街\野薑花粽.jpg" />
+    <Content Include="景點介紹\新竹\六福村\ㄤ咕麵.jpg" />
+    <Content Include="景點介紹\新竹\六福村\ㄤ咕麵1.jpg" />
+    <Content Include="景點介紹\新竹\六福村\六福村.jpg" />
+    <Content Include="景點介紹\新竹\司馬庫斯\司馬庫斯.jpg" />
+    <Content Include="景點介紹\新竹\司馬庫斯\司馬庫斯1.jpg" />
+    <Content Include="景點介紹\新竹\司馬庫斯\迦南美食咖啡館.jpg" />
+    <Content Include="景點介紹\新竹\司馬庫斯\迦南美食咖啡館1.jpg" />
+    <Content Include="景點介紹\新竹\味衛佳柿餅\味衛佳.jpg" />
+    <Content Include="景點介紹\新竹\味衛佳柿餅\味衛佳1.jpg" />
+    <Content Include="景點介紹\新竹\味衛佳柿餅\柿餅.jpg" />
+    <Content Include="景點介紹\新竹\味衛佳柿餅\柿餅1.jpg" />
+    <Content Include="景點介紹\新竹\味衛佳柿餅\美食介紹.jpg" />
+    <Content Include="景點介紹\桃園\八德落羽松森林\興仁花園夜市.jpg" />
+    <Content Include="景點介紹\桃園\八德落羽松森林\興仁花園夜市1.jpg" />
+    <Content Include="景點介紹\桃園\八德落羽松森林\落羽松.jpg" />
+    <Content Include="景點介紹\桃園\八德落羽松森林\落羽松1.jpg" />
+    <Content Include="景點介紹\桃園\大溪老街\大溪老街.jpg" />
+    <Content Include="景點介紹\桃園\大溪老街\游記百年油飯.jpg" />
+    <Content Include="景點介紹\桃園\大溪老街\美食介紹.jpg" />
+    <Content Include="景點介紹\桃園\大溪老街\芊香園.jpg" />
+    <Content Include="景點介紹\桃園\大溪老街\黃大目豆干.jpg" />
+    <Content Include="景點介紹\桃園\石門水庫\大石門活魚.jpg" />
+    <Content Include="景點介紹\桃園\石門水庫\大石門活魚1.jpg" />
+    <Content Include="景點介紹\桃園\石門水庫\楓葉.jpg" />
+    <Content Include="景點介紹\桃園\石門水庫\石門山步道.jpg" />
+    <Content Include="景點介紹\桃園\石門水庫\石門水庫1.jpg" />
+    <Content Include="景點介紹\花蓮\七星潭\七星潭.jpg" />
+    <Content Include="景點介紹\花蓮\七星潭\七星潭1.jpg" />
+    <Content Include="景點介紹\花蓮\七星潭\原野牧場.jpg" />
+    <Content Include="景點介紹\花蓮\七星潭\原野牧場1.jpg" />
+    <Content Include="景點介紹\花蓮\六十石山金針花海\六十石山.jpg" />
+    <Content Include="景點介紹\花蓮\六十石山金針花海\六十石山1.jpg" />
+    <Content Include="景點介紹\花蓮\六十石山金針花海\金針花料理.jpg" />
+    <Content Include="景點介紹\花蓮\六十石山金針花海\鐵掌櫃茶舍.jpg" />
+    <Content Include="景點介紹\花蓮\大鼻山步道\大鼻山步道.jpg" />
+    <Content Include="景點介紹\花蓮\大鼻山步道\頭目海產店.jpg" />
+    <Content Include="景點介紹\花蓮\大鼻山步道\頭目海產店1.jpg" />
+    <Content Include="景點介紹\花蓮\貨櫃星巴克\洄瀾門式限定杯.jpg" />
+    <Content Include="景點介紹\花蓮\貨櫃星巴克\玉里橋頭臭豆腐.jpg" />
+    <Content Include="景點介紹\花蓮\貨櫃星巴克\貨櫃屋星巴克.jpg" />
+    <Content Include="景點介紹\花蓮\貨櫃星巴克\貨櫃屋星巴克1.jpg" />
+    <Content Include="景點介紹\苗栗\崎頂子母隧道\小木匠 Little Carpenter.png" />
+    <Content Include="景點介紹\苗栗\崎頂子母隧道\小木匠 Little Carpenter1.jpg" />
+    <Content Include="景點介紹\苗栗\崎頂子母隧道\崎頂子母隧道.png" />
+    <Content Include="景點介紹\苗栗\崎頂子母隧道\崎頂車站.jpg" />
+    <Content Include="景點介紹\苗栗\竹南啤酒廠\joku.jpg" />
+    <Content Include="景點介紹\苗栗\竹南啤酒廠\joku內部.jpg" />
+    <Content Include="景點介紹\苗栗\竹南啤酒廠\竹南啤酒廠.jpg" />
+    <Content Include="景點介紹\苗栗\竹南啤酒廠\竹南啤酒廠1.jpg" />
+    <Content Include="景點介紹\苗栗\銅鑼天空步道\銅鑼天空步道.jpg" />
+    <Content Include="景點介紹\苗栗\銅鑼天空步道\銅鑼天空步道1.jpg" />
+    <Content Include="景點介紹\苗栗\銅鑼天空步道\雙峰草堂銅鑼燒.jpg" />
+    <Content Include="景點介紹\雲林\天空之橋\516300.jpg" />
+    <Content Include="景點介紹\雲林\天空之橋\IMG_3713-Sky-Bridge.jpg" />
+    <Content Include="景點介紹\雲林\天空之橋\北港天空之橋010.jpg" />
+    <Content Include="景點介紹\雲林\天空之橋\廟邊假魚肚.jpg" />
+    <Content Include="景點介紹\雲林\珍粉紅教堂\20190228210501_70.jpg" />
+    <Content Include="景點介紹\雲林\珍粉紅教堂\20200115161622_38.jpg" />
+    <Content Include="景點介紹\雲林\珍粉紅教堂\images.jpg" />
+    <Content Include="景點介紹\雲林\珍粉紅教堂\溝壩蔥抓餅.jpg" />
+    <Content Include="景點介紹\雲林\菓風巧克力工房\1561394073-ef4e366826fb578085e93c01d589dabe.jpg" />
+    <Content Include="景點介紹\雲林\菓風巧克力工房\20180730144032_95.jpg" />
+    <Content Include="景點介紹\雲林\菓風巧克力工房\2019040003.jpg" />
+    <Content Include="景點介紹\雲林\菓風巧克力工房\老吳紅燒牛肉麵.jpg" />
+    <Content Include="景點介紹\高雄\月世界地景公園\1106722596_l.jpg" />
+    <Content Include="景點介紹\高雄\月世界地景公園\tianliao-moon-world-5.jpg" />
+    <Content Include="景點介紹\高雄\月世界地景公園\家昌土雞園.jpg" />
+    <Content Include="景點介紹\高雄\月世界地景公園\田寮月世界空拍照.jpg" />
+    <Content Include="景點介紹\高雄\棧貳庫 KW2\1_han4318.jpg" />
+    <Content Include="景點介紹\高雄\棧貳庫 KW2\atl_20190227194506_205.jpg" />
+    <Content Include="景點介紹\高雄\棧貳庫 KW2\下載.jpg" />
+    <Content Include="景點介紹\高雄\棧貳庫 KW2\泰山汕頭火鍋.jpg" />
+    <Content Include="景點介紹\高雄\龍頭山遊憩區\1466178467-819243131.jpg" />
+    <Content Include="景點介紹\高雄\龍頭山遊憩區\1466178510-2238854150.jpg" />
+    <Content Include="景點介紹\高雄\龍頭山遊憩區\14948012886_fe7f5eb8bd_c.jpg" />
+    <Content Include="景點介紹\高雄\龍頭山遊憩區\瑪姿餐飲店.jpg" />
+    <Content Include="月世界地景公園.aspx" />
+    <Content Include="桃園.aspx" />
+    <Content Include="棧貳庫 KW2.aspx" />
+    <Content Include="民俗文物館.aspx" />
+    <Content Include="水銡利廚衛生活村.aspx" />
+    <Content Include="港濱歷史公園.aspx" />
+    <Content Include="滔月景觀咖啡.aspx" />
+    <Content Include="珍粉紅教堂.aspx" />
+    <Content Include="石門水庫.aspx" />
+    <Content Include="福隆.aspx" />
+    <Content Include="竹南啤酒廠.aspx" />
+    <Content Include="羅東夜市.aspx" />
+    <Content Include="艾米達精靈谷茶樹莊園.aspx" />
+    <Content Include="花蓮.aspx" />
+    <Content Include="苗栗.aspx" />
+    <Content Include="菓風巧克力工房.aspx" />
+    <Content Include="萬景藝苑.aspx" />
+    <Content Include="落羽松.aspx" />
+    <Content Include="藍田書院.aspx" />
+    <Content Include="蘭陽博物館.aspx" />
+    <Content Include="西門町.aspx" />
+    <Content Include="象山.aspx" />
+    <Content Include="貨櫃屋星巴克.aspx" />
+    <Content Include="達魯瑪克部落.aspx" />
+    <Content Include="銅鑼天空步道.aspx" />
+    <Content Include="雙北.aspx" />
+    <Content Include="雲林.aspx" />
+    <Content Include="高雄.aspx" />
+    <Content Include="鰲鼓溼地.aspx" />
+    <Content Include="鹿耳門聖母廟.aspx" />
+    <Content Include="鹿野高台.aspx" />
+    <Content Include="龍頭山遊憩區.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="七星潭.aspx.cs">
+      <DependentUpon>七星潭.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="七星潭.aspx.designer.cs">
+      <DependentUpon>七星潭.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="九份.aspx.cs">
+      <DependentUpon>九份.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="九份.aspx.designer.cs">
+      <DependentUpon>九份.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="九棚沙漠.aspx.cs">
+      <DependentUpon>九棚沙漠.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="九棚沙漠.aspx.designer.cs">
+      <DependentUpon>九棚沙漠.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="五結鄉.aspx.cs">
+      <DependentUpon>五結鄉.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="五結鄉.aspx.designer.cs">
+      <DependentUpon>五結鄉.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="內灣戲院.aspx.cs">
+      <DependentUpon>內灣戲院.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="內灣戲院.aspx.designer.cs">
+      <DependentUpon>內灣戲院.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="六十石山.aspx.cs">
+      <DependentUpon>六十石山.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="六十石山.aspx.designer.cs">
+      <DependentUpon>六十石山.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="六福村.aspx.cs">
+      <DependentUpon>六福村.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="六福村.aspx.designer.cs">
+      <DependentUpon>六福村.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="南投.aspx.cs">
+      <DependentUpon>南投.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="南投.aspx.designer.cs">
+      <DependentUpon>南投.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="南方澳.aspx.cs">
+      <DependentUpon>南方澳.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="南方澳.aspx.designer.cs">
+      <DependentUpon>南方澳.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="南洋風高腳屋.aspx.cs">
+      <DependentUpon>南洋風高腳屋.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="南洋風高腳屋.aspx.designer.cs">
+      <DependentUpon>南洋風高腳屋.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="原住民文化創意產業聚落.aspx.cs">
+      <DependentUpon>原住民文化創意產業聚落.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="原住民文化創意產業聚落.aspx.designer.cs">
+      <DependentUpon>原住民文化創意產業聚落.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="台中.aspx.cs">
+      <DependentUpon>台中.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="台中.aspx.designer.cs">
+      <DependentUpon>台中.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="台南.aspx.cs">
+      <DependentUpon>台南.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="台南.aspx.designer.cs">
+      <DependentUpon>台南.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="台東.aspx.cs">
+      <DependentUpon>台東.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="台東.aspx.designer.cs">
+      <DependentUpon>台東.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="台江國家公園.aspx.cs">
+      <DependentUpon>台江國家公園.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="台江國家公園.aspx.designer.cs">
+      <DependentUpon>台江國家公園.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="司馬庫斯.aspx.cs">
+      <DependentUpon>司馬庫斯.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="司馬庫斯.aspx.designer.cs">
+      <DependentUpon>司馬庫斯.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="味衛佳.aspx.cs">
+      <DependentUpon>味衛佳.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="味衛佳.aspx.designer.cs">
+      <DependentUpon>味衛佳.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="嘉義.aspx.cs">
+      <DependentUpon>嘉義.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="嘉義.aspx.designer.cs">
+      <DependentUpon>嘉義.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="大溪老街.aspx.cs">
+      <DependentUpon>大溪老街.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="大溪老街.aspx.designer.cs">
+      <DependentUpon>大溪老街.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="大理藝術特區.aspx.cs">
+      <DependentUpon>大理藝術特區.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="大理藝術特區.aspx.designer.cs">
+      <DependentUpon>大理藝術特區.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="大鼻山步道.aspx.cs">
+      <DependentUpon>大鼻山步道.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="大鼻山步道.aspx.designer.cs">
+      <DependentUpon>大鼻山步道.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="天空之橋.aspx.cs">
+      <DependentUpon>天空之橋.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="天空之橋.aspx.designer.cs">
+      <DependentUpon>天空之橋.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="好美里3D立體彩繪村.aspx.cs">
+      <DependentUpon>好美里3D立體彩繪村.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="好美里3D立體彩繪村.aspx.designer.cs">
+      <DependentUpon>好美里3D立體彩繪村.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="宜蘭.aspx.cs">
+      <DependentUpon>宜蘭.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="宜蘭.aspx.designer.cs">
+      <DependentUpon>宜蘭.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="寶島時代村.aspx.cs">
+      <DependentUpon>寶島時代村.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="寶島時代村.aspx.designer.cs">
+      <DependentUpon>寶島時代村.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="射日塔.aspx.cs">
+      <DependentUpon>射日塔.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="射日塔.aspx.designer.cs">
+      <DependentUpon>射日塔.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="屏東.aspx.cs">
+      <DependentUpon>屏東.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="屏東.aspx.designer.cs">
+      <DependentUpon>屏東.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="崎頂子母隧道.aspx.cs">
+      <DependentUpon>崎頂子母隧道.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="崎頂子母隧道.aspx.designer.cs">
+      <DependentUpon>崎頂子母隧道.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="彩虹眷村.aspx.cs">
+      <DependentUpon>彩虹眷村.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="彩虹眷村.aspx.designer.cs">
+      <DependentUpon>彩虹眷村.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="彰化.aspx.cs">
+      <DependentUpon>彰化.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="彰化.aspx.designer.cs">
+      <DependentUpon>彰化.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="忘憂森林.aspx.cs">
+      <DependentUpon>忘憂森林.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="忘憂森林.aspx.designer.cs">
+      <DependentUpon>忘憂森林.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="摸乳巷.aspx.cs">
+      <DependentUpon>摸乳巷.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="摸乳巷.aspx.designer.cs">
+      <DependentUpon>摸乳巷.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="新竹.aspx.cs">
+      <DependentUpon>新竹.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="新竹.aspx.designer.cs">
+      <DependentUpon>新竹.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="月世界地景公園.aspx.cs">
+      <DependentUpon>月世界地景公園.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="月世界地景公園.aspx.designer.cs">
+      <DependentUpon>月世界地景公園.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="桃園.aspx.cs">
+      <DependentUpon>桃園.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="桃園.aspx.designer.cs">
+      <DependentUpon>桃園.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="棧貳庫 KW2.aspx.cs">
+      <DependentUpon>棧貳庫 KW2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="棧貳庫 KW2.aspx.designer.cs">
+      <DependentUpon>棧貳庫 KW2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="民俗文物館.aspx.cs">
+      <DependentUpon>民俗文物館.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="民俗文物館.aspx.designer.cs">
+      <DependentUpon>民俗文物館.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="水銡利廚衛生活村.aspx.cs">
+      <DependentUpon>水銡利廚衛生活村.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="水銡利廚衛生活村.aspx.designer.cs">
+      <DependentUpon>水銡利廚衛生活村.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="港濱歷史公園.aspx.cs">
+      <DependentUpon>港濱歷史公園.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="港濱歷史公園.aspx.designer.cs">
+      <DependentUpon>港濱歷史公園.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="滔月景觀咖啡.aspx.cs">
+      <DependentUpon>滔月景觀咖啡.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="滔月景觀咖啡.aspx.designer.cs">
+      <DependentUpon>滔月景觀咖啡.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="珍粉紅教堂.aspx.cs">
+      <DependentUpon>珍粉紅教堂.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="珍粉紅教堂.aspx.designer.cs">
+      <DependentUpon>珍粉紅教堂.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="石門水庫.aspx.cs">
+      <DependentUpon>石門水庫.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="石門水庫.aspx.designer.cs">
+      <DependentUpon>石門水庫.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="福隆.aspx.cs">
+      <DependentUpon>福隆.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="福隆.aspx.designer.cs">
+      <DependentUpon>福隆.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="竹南啤酒廠.aspx.cs">
+      <DependentUpon>竹南啤酒廠.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="竹南啤酒廠.aspx.designer.cs">
+      <DependentUpon>竹南啤酒廠.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="羅東夜市.aspx.cs">
+      <DependentUpon>羅東夜市.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="羅東夜市.aspx.designer.cs">
+      <DependentUpon>羅東夜市.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="艾米達精靈谷茶樹莊園.aspx.cs">
+      <DependentUpon>艾米達精靈谷茶樹莊園.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="艾米達精靈谷茶樹莊園.aspx.designer.cs">
+      <DependentUpon>艾米達精靈谷茶樹莊園.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="花蓮.aspx.cs">
+      <DependentUpon>花蓮.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="花蓮.aspx.designer.cs">
+      <DependentUpon>花蓮.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="苗栗.aspx.cs">
+      <DependentUpon>苗栗.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="苗栗.aspx.designer.cs">
+      <DependentUpon>苗栗.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="菓風巧克力工房.aspx.cs">
+      <DependentUpon>菓風巧克力工房.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="菓風巧克力工房.aspx.designer.cs">
+      <DependentUpon>菓風巧克力工房.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="萬景藝苑.aspx.cs">
+      <DependentUpon>萬景藝苑.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="萬景藝苑.aspx.designer.cs">
+      <DependentUpon>萬景藝苑.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="落羽松.aspx.cs">
+      <DependentUpon>落羽松.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="落羽松.aspx.designer.cs">
+      <DependentUpon>落羽松.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="藍田書院.aspx.cs">
+      <DependentUpon>藍田書院.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="藍田書院.aspx.designer.cs">
+      <DependentUpon>藍田書院.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="蘭陽博物館.aspx.cs">
+      <DependentUpon>蘭陽博物館.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="蘭陽博物館.aspx.designer.cs">
+      <DependentUpon>蘭陽博物館.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="西門町.aspx.cs">
+      <DependentUpon>西門町.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="西門町.aspx.designer.cs">
+      <DependentUpon>西門町.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="象山.aspx.cs">
+      <DependentUpon>象山.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="象山.aspx.designer.cs">
+      <DependentUpon>象山.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="貨櫃屋星巴克.aspx.cs">
+      <DependentUpon>貨櫃屋星巴克.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="貨櫃屋星巴克.aspx.designer.cs">
+      <DependentUpon>貨櫃屋星巴克.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="達魯瑪克部落.aspx.cs">
+      <DependentUpon>達魯瑪克部落.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="達魯瑪克部落.aspx.designer.cs">
+      <DependentUpon>達魯瑪克部落.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="銅鑼天空步道.aspx.cs">
+      <DependentUpon>銅鑼天空步道.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="銅鑼天空步道.aspx.designer.cs">
+      <DependentUpon>銅鑼天空步道.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="雙北.aspx.cs">
+      <DependentUpon>雙北.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="雙北.aspx.designer.cs">
+      <DependentUpon>雙北.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="雲林.aspx.cs">
+      <DependentUpon>雲林.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="雲林.aspx.designer.cs">
+      <DependentUpon>雲林.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="高雄.aspx.cs">
+      <DependentUpon>高雄.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="高雄.aspx.designer.cs">
+      <DependentUpon>高雄.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="鰲鼓溼地.aspx.cs">
+      <DependentUpon>鰲鼓溼地.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="鰲鼓溼地.aspx.designer.cs">
+      <DependentUpon>鰲鼓溼地.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="鹿耳門聖母廟.aspx.cs">
+      <DependentUpon>鹿耳門聖母廟.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="鹿耳門聖母廟.aspx.designer.cs">
+      <DependentUpon>鹿耳門聖母廟.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="鹿野高台.aspx.cs">
+      <DependentUpon>鹿野高台.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="鹿野高台.aspx.designer.cs">
+      <DependentUpon>鹿野高台.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="龍頭山遊憩區.aspx.cs">
+      <DependentUpon>龍頭山遊憩區.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="龍頭山遊憩區.aspx.designer.cs">
+      <DependentUpon>龍頭山遊憩區.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\charlie0614 - Web Deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49679</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49679/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
